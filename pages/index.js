@@ -1,24 +1,57 @@
-import Link from '@/components/Link'
-import { PageSEO } from '@/components/SEO'
-import Tag from '@/components/Tag'
-import siteMetadata from '@/data/siteMetadata'
-import { getAllFilesFrontMatter } from '@/lib/mdx'
-import formatDate from '@/lib/utils/formatDate'
-
-import NewsletterForm from '@/components/NewsletterForm'
-
-const MAX_DISPLAY = 5
+import Link from "@/components/Link";
+import { PageSEO } from "@/components/SEO";
+import Tag from "@/components/Tag";
+import siteMetadata from "@/data/siteMetadata";
+import { getAllFilesFrontMatter } from "@/lib/mdx";
+import formatDate from "@/lib/utils/formatDate";
+import { useEffect, useRef, useState, createRef } from "react";
+import NewsletterForm from "@/components/NewsletterForm";
+import { StyleSheet, css } from "aphrodite";
+import { flipInX } from "react-animations";
+const MAX_DISPLAY = 5;
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('blog')
+  const posts = await getAllFilesFrontMatter("blog");
 
-  return { props: { posts } }
+  return { props: { posts } };
 }
 
 export default function Home({ posts }) {
+  const styles = StyleSheet.create({
+    flipInX: {
+      animationName: flipInX,
+      animationDuration: "1.5s",
+    },
+  });
+  const [counter, setCounter] = useState(0);
+
+  const refs = useRef(Array.from({ length: posts.length }, (a) => createRef()));
+  const flip = (index) => {
+    if (refs.current[index].current)
+      refs.current[index].current.className = [
+        "py-12",
+        css(styles.flipInX),
+      ].join(" ");
+    const timeoutId = setTimeout(() => {
+      if (refs.current[index].current)
+        refs.current[index].current.className = "py-12";
+    }, 1500);
+  };
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      flip(counter);
+      if (counter === posts.length - 1) return;
+      setCounter((prevCounter) => prevCounter + 1);
+    }, 100);
+    return () => clearInterval(timeoutId);
+  }, [counter]);
+
   return (
     <>
-      <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
+      <PageSEO
+        title={siteMetadata.title}
+        description={siteMetadata.description}
+      />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
@@ -29,14 +62,18 @@ export default function Home({ posts }) {
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-          {!posts.length && 'No posts found.'}
-          {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
+          {!posts.length && "No posts found."}
+          {posts.slice(0, MAX_DISPLAY).map((frontMatter, index) => {
+            const { slug, date, title, summary, tags } = frontMatter;
             return (
-              <li key={slug} className="py-12">
+              <li key={slug} className="py-12" ref={refs.current[index]}>
                 <article>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                    <dl>
+                    <dl
+                      onMouseEnter={() => {
+                        flip(index);
+                      }}
+                    >
                       <dt className="sr-only">Published on</dt>
                       <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                         <time dateTime={date}>{formatDate(date)}</time>
@@ -76,7 +113,7 @@ export default function Home({ posts }) {
                   </div>
                 </article>
               </li>
-            )
+            );
           })}
         </ul>
       </div>
@@ -91,11 +128,11 @@ export default function Home({ posts }) {
           </Link>
         </div>
       )}
-      {siteMetadata.newsletter.provider !== '' && (
+      {siteMetadata.newsletter.provider !== "" && (
         <div className="flex items-center justify-center pt-4">
           <NewsletterForm />
         </div>
       )}
     </>
-  )
+  );
 }
