@@ -11,11 +11,11 @@ const siteMetadata = {
   image: "/static/images/avatar.png",
   socialBanner: "/static/images/twitter-card.png",
   //email: 'address@yoursite.com',
-  github: "https://github.com",
+  github: "https://github.com/Arash-Zhianfard",
   //twitter: 'https://twitter.com/Twitter',
   //facebook: 'https://facebook.com',
   // youtube: 'https://youtube.com',
-  linkedin: "https://www.linkedin.com",
+  linkedin: "https://www.linkedin.com/in/arash-zhianfard",
   locale: "en-US",
   analytics: {
     // If you want to use an analytics provider you have to add it to the
@@ -29,7 +29,7 @@ const siteMetadata = {
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
     // Please add your .env file and modify it according to your selection
-    provider: "buttondown",
+    provider: "",
   },
   comment: {
     // If you want to use a commenting system other than giscus you have to add it to the
