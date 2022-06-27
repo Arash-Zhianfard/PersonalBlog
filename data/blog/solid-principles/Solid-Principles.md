@@ -21,8 +21,8 @@ In following links I explained the detail for each principle
 
 ## Principles
 
-- [Single Responsibility](https://nextjs.org/docs/advanced-features/i18n-routing)
-- [Open-Closed](https://nextjs.org/docs/advanced-features/i18n-routing)
-- [Liskov Substitution](https://nextjs.org/docs/advanced-features/i18n-routing)
-- [Interface Segregation](https://nextjs.org/docs/advanced-features/i18n-routing)
-- [Dependency Inversion ](https://nextjs.org/docs/advanced-features/i18n-routing)
+- [Single Responsibility](https://arash.zhianfard.com/blog/solid-principles/single-responsibility)
+- [Open-Closed](https://arash.zhianfard.com/blog/solid-principles/open-close)
+- [Liskov Substitution](https://arash.zhianfard.com/)
+- [Interface Segregation](https://arash.zhianfard.com/)
+- [Dependency Inversion ](https://arash.zhianfard.com/)
