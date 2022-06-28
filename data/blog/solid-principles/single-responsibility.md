@@ -1,6 +1,6 @@
 ---
 title: Single Responsibility Principle
-date: '2021-05-02'
+date: '2022-06-28'
 tags: ['Single-Responsibility','Solid-Principles-in-c#','Object-Oriented-Programming']
 draft: false
 summary: '
@@ -38,7 +38,9 @@ Three completely different responsibilities in one class, therefore any change 
 
 ## Solution
 
-Wouldn’t be better if we chunk this class to three class with one responsibility?
+Wouldn’t be better if we chunk this class to three classes with one responsibility?
+
+![Single-Responsibility](https://i.ibb.co/s6R6mCB/11.jpg)
 
 ```csharp showLineNumbers
 public class UserService

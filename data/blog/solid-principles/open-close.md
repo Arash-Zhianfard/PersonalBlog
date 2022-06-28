@@ -1,6 +1,6 @@
 ---
 title: Open-Close Principle
-date: '2021-05-02'
+date: '2022-06-28'
 tags: ['Open-close-principle','Solid-Principles-in-c#','Object-Oriented-Programming']
 draft: false
 summary: '
@@ -105,3 +105,5 @@ public class PushNotification : INotification
 ```
 
 with this approach classes are _**open for extension but close for modification**_.
+
+!['open-close'](https://i.ibb.co/Gds0VPY/22.jpg)

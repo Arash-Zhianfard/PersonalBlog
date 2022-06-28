@@ -23,6 +23,6 @@ In following links I explained the detail for each principle
 
 - [Single Responsibility](https://arash.zhianfard.com/blog/solid-principles/single-responsibility)
 - [Open-Closed](https://arash.zhianfard.com/blog/solid-principles/open-close)
-- [Liskov Substitution](https://arash.zhianfard.com/)
+- [Liskov Substitution](https://arash.zhianfard.com/blog/solid-principles/liskov-substitution)
 - [Interface Segregation](https://arash.zhianfard.com/)
 - [Dependency Inversion ](https://arash.zhianfard.com/)
