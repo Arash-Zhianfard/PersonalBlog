@@ -1,7 +1,7 @@
 const siteMetadata = {
-  title: "Easy Programming",
+  title: "coding Blog",
   author: "Arash",
-  headerTitle: "Easy Programming",
+  headerTitle: " ",
   description: "Let's learn together!",
   language: "en-us",
   theme: "system", // system, dark or light
