@@ -1,8 +1,8 @@
 const siteMetadata = {
-  title: "Easy Programming",
+  title: "Coding Blog",
   author: "Arash",
-  headerTitle: "Easy Programming",
-  description: "Let's learn together!",
+  headerTitle: "Coding Blog",
+  description: "Coding Blog",
   language: "en-us",
   theme: "system", // system, dark or light
   siteUrl: "https://arash.zhianfard.com",
