@@ -10,8 +10,8 @@ There are two approaches to have global namespaces
 '
 ---
 
-Many times during the developing few namespaces need to be imported in almost all the classes in the project beside Namespaces like `System` and `System.Linq` are required in most .cs files.
-With global namespace new feature in C# 10 we are to simplify importing namespaces therefore, there is no need to import these namespaces in projects over and over again.
+Many times during developing projects few namespaces need to be imported in almost all the classes for instance, `System` and `System.Linq` are required in most .cs files.
+With new feature, **global namespace** in C# 10, we are to simplify importing namespaces therefore, there is no need to import these namespaces in projects over and over again.
 
 There are two approaches to have global namespaces
 
