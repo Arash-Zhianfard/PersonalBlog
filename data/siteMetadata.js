@@ -4,7 +4,7 @@ const siteMetadata = {
   headerTitle: "Coding Blog",
   description: "Coding Blog",
   language: "en-us",
-  theme: "system", // system, dark or light
+  theme: "dark", // system, dark or light
   siteUrl: "https://arash.zhianfard.com",
   siteRepo: "https://github.com/Arash-Zhianfard/PersonalBlog",
   siteLogo: "/static/images/logo.png",
