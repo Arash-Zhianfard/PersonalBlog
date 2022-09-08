@@ -13,9 +13,11 @@ draft: false
 summary: "General Tips/Recommendations To Improve Code Quality In C#."
 ---
 
-There are many books and blogs about clean code and and how to make it more efficient but I couldn't find any comprehensive reference that helps me to improve my code and also reviewing the tips and recommendations in order to make it more readable and efficient.
+There are many books and blogs about clean code and how to make it more efficient, but I couldn't find any comprehensive reference that helps me to improve my code and reviewing the tips and recommendations.
 
-I will show few cases which we are able to improve code readability and efficiency and moreover, new c# features can help us to have more readable code. I have to emphasize that these are recommendations and every developer can have a different opinion about them.
+I will show number of cases which we are able to improve code readability and efficiency, I also mentioned new c# features which could help us to achieve them.
+
+I must emphasize that these are recommendations, and every developer could have a different opinion about them.
 
 **1-Use explicit type when type is not clear ,some developers tend to use `var` everywhere just because it’s convenient.**
 
