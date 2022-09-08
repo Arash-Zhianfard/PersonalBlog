@@ -1,5 +1,5 @@
 ---
-title: General tips and recommendations to improve code quality in C#(part-1)
+title: General Tips/Recommendations To Improve Code Quality In C#.(part-1)
 date: "2022-08-22"
 tags:
   [
@@ -10,7 +10,7 @@ tags:
     "C#-10-string-interpolated",
   ]
 draft: false
-summary: "General tips and recommendations to improve code quality in C#."
+summary: "General Tips/Recommendations To Improve Code Quality In C#."
 ---
 
 There are many books and blogs about clean code and and how to make it more efficient but I couldn't find any comprehensive reference that helps me to improve my code and also reviewing the tips and recommendations in order to make it more readable and efficient.

@@ -44,7 +44,7 @@ public interface IExample
 
 ---
 
-**3-Use camel casing in addition to prefixing the name with an `_`**
+**3-For Private or Internal fields Use camel casing in addition to prefixing the name with an `_`**
 
 ```csharp {3} showLineNumbers
 public class Example
