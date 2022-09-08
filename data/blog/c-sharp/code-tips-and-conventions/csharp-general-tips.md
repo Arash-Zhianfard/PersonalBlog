@@ -87,17 +87,17 @@ Console.WriteLine($"we have {studentCount} students and  average grade is {avera
 Consider changing following code
 
 ```csharp {3} showLineNumbers
-string firstname = "Jack";
-string lastname = "Smith";
-string fullname = firstname + " " + lastname;
+var firstname = "Jack";
+var lastname = "Smith";
+var fullname = firstname + " " + lastname;
 ```
 
 To
 
 ```csharp {3} showLineNumbers
-string firstname = "Jack";
-string lastname = "Smith";
-string fullname = "{firstname} {lastname}";
+var firstname = "Jack";
+var lastname = "Smith";
+var fullname = "{firstname} {lastname}";
 ```
 
 ---
@@ -154,7 +154,7 @@ Consider changing following code
 ```csharp {3} showLineNumbers
 class Example
 {
-    const string firstname="Jack"
+    const string _firstname="Jack"
 }
 ```
 
@@ -163,7 +163,7 @@ To
 ```csharp {3} showLineNumbers
 internal class Example
 {
-   private const string firstname="Jack"
+   private string _firstname="Jack"
 }
 ```
 
@@ -172,6 +172,12 @@ internal class Example
 **9- Consider specify the name of the parameter as well as its value, if they provide more meaning for functions' declaration.**
 
 Consider changing following code
+
+```csharp
+Person person = new Person() { "Jack", "Smith", new DateTime(1993, 1, 1)};
+```
+
+---
 
 ```csharp
 Person person = new Person() { FirstName = "Jack", LastName="Smith", DateOfBirth = new DateTime(1993, 1, 1)};
